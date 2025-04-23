@@ -9,8 +9,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff; /* Default to white */
-            color: #343a40; /* Darker text */
+            background-color: #f4f7f6;
+            color: #343a40;
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -24,10 +24,15 @@
             padding: 60px 0;
         }
 
-        /* Header Styles */
+        /* Header Styles (Startuply Inspired) */
         header {
-            background: #fff;
-            color: #343a40;
+            background: linear-gradient(to right, #34495e, #2c3e50); /* Dark blue gradient */
+            /* Add the geometric pattern overlay */
+            background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05)),
+                              linear-gradient(135deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05));
+            background-size: 20px 20px; /* Adjust size to control pattern density */
+            background-position: 0 0, 10px 10px; /* Offset the second gradient for the pattern */
+            color: #ecf0f1; /* Light gray text for navigation */
             padding: 20px 0;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: sticky;
@@ -42,7 +47,7 @@
         }
 
         header h1 a {
-            color: #007bff;
+            color: #007bff; /* Keep your logo color */
             text-decoration: none;
             font-size: 24px;
             font-weight: bold;
@@ -53,6 +58,7 @@
             margin: 0;
             list-style: none;
             display: flex;
+            align-items: center; /* Vertically align items */
         }
 
         header nav ul li {
@@ -60,19 +66,38 @@
         }
 
         header nav ul li a {
-            color: #555;
+            color: #ecf0f1; /* Light gray navigation text */
             text-decoration: none;
             font-size: 16px;
             transition: color 0.3s ease;
         }
 
         header nav ul li a:hover {
-            color: #0056b3; /* Slightly darker blue on hover */
+            color: #1abc9c; /* Teal hover effect */
+        }
+
+        header nav ul li:last-child { /* Style the Contact button (replaces Sign Up) */
+            margin-left: 30px;
+        }
+
+        header nav ul li:last-child a {
+            background-color: #1abc9c; /* Teal button background */
+            color: white; /* White button text */
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        header nav ul li:last-child a:hover {
+            background-color: #16a085; /* Darker teal on hover */
+            color: white;
         }
 
         /* Showcase Section */
         #showcase {
-            background: linear-gradient(to bottom, #007bff, #0056b3); /* Blue gradient */
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1519389950473-47e70563f0e7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
             color: #fff;
             text-align: center;
             padding: 150px 0;
