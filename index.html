@@ -1,100 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ironbay Capital</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Bay Investments</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0e0e0e;
-      color: #ffffff;
-      line-height: 1.6;
-    }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 60px 0;
+        }
 
-    .hero {
-      height: 100vh;
-      background-image: url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1600&q=80');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0 20px;
-    }
+        /* Header Styles */
+        header {
+            background: #fff;
+            color: #333;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    .hero h1 {
-      font-size: 3rem;
-      max-width: 800px;
-    }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+        header h1 a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
 
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
+        header nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+        }
 
-    .section p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
+        header nav ul li {
+            margin-left: 25px;
+        }
 
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
+        header nav ul li a {
+            color: #555;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
 
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+        header nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Showcase Section */
+        #showcase {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1519389950473-47e70563f0e7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 150px 0;
+        }
+
+        #showcase .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #showcase h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        #showcase p {
+            font-size: 20px;
+            max-width: 700px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* About Section */
+        #about {
+            background: #fff;
+        }
+
+        #about .container {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        #about .about-text {
+            flex: 1;
+        }
+
+        #about h2 {
+            font-size: 32px;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        #about p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        #about .about-image {
+            flex: 1;
+        }
+
+        #about .about-image img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            content: url('https://images.unsplash.com/photo-1501164333659-c8a325840a49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Placeholder image */
+        }
+
+        /* Services Section */
+        #services {
+            background: #f9f9f9;
+        }
+
+        #services h2 {
+            font-size: 32px;
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #services ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        #services ul li {
+            background: #fff;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #services ul li h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        #services ul li p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Global Presence Section */
+        #global {
+            background: #e9ecef;
+        }
+
+        #global h2 {
+            font-size: 32px;
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #global ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        #global ul li {
+            font-size: 20px;
+            color: #555;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: #fff;
+        }
+
+        #contact h2 {
+            font-size: 32px;
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        #contact label {
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #contact input[type="text"],
+        #contact input[type="email"],
+        #contact textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        #contact textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        #contact button[type="submit"] {
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #contact .contact-info {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        #contact .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        #contact .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        /* Image for About Section (replace with your actual image URL if needed) */
+        #about .about-image img {
+            content: url('https://images.unsplash.com/photo-1501164333659-c8a325840a49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1><a href="#">Iron Bay Investments</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#global">Global Presence</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <section class="hero">
-    <h1>Ironbay Capital — Bridging Borders, One Arbitrage at a Time</h1>
-  </section>
+    <section id="showcase">
+        <div class="container">
+            <h1>Experience the Power of Informed Investing</h1>
+            <p>Build a Strong Foundation for Your Financial Future Today</p>
+            <a href="#contact" class="button">Contact Us</a>
+        </div>
+    </section>
 
-  <section class="section">
-    <h2>What We Do</h2>
-    <p>
-      Ironbay Capital is a cross-border capital management firm that leverages arbitrage opportunities across emerging markets. We simplify digital asset transfers while staying compliant, quick, and efficient.
-    </p>
-  </section>
+    <section id="about" class="container">
+        <div class="about-text">
+            <h2>Who Are We?</h2>
+            <p>We are driven by a commitment to delivering exceptional investment outcomes. We leverage a data-driven approach and a deep understanding of global markets to help our clients achieve their financial goals. Our team of experienced professionals provides personalized guidance and strategic insights across a range of asset classes.</p>
+            <p>At Iron Bay Investments, we believe in building long-term relationships based on trust and transparency. We are dedicated to understanding your unique needs and tailoring our investment strategies to align with your objectives and risk tolerance.</p>
+        </div>
+        <div class="about-image">
+            <img src="" alt="Investment Strategy">
+        </div>
+    </section>
 
-  <section class="section">
-    <h2>Our Advantage</h2>
-    <p>
-      With a presence in Dubai and India, we ensure secure, real-time conversions between stablecoins and local currencies — powering global businesses and individuals who rely on fast and trustworthy financial flows.
-    </p>
-  </section>
+    <section id="services" class="container">
+        <h2>Our Expertise</h2>
+        <ul>
+            <li>
+                <h3>Stocks</h3>
+                <p>Strategic investments in equity markets worldwide, focusing on growth and value opportunities.</p>
+            </li>
+            <li>
+                <h3>Bonds</h3>
+                <p>Fixed-income solutions designed to provide stability and consistent returns through diverse bond portfolios.</p>
+            </li>
+            <li>
+                <h3>Real Estate</h3>
+                <p>Expertise in identifying and managing high-potential real estate investments across various sectors.</p>
+            </li>
+            <li>
+                <h3>Crypto</h3>
+                <p>Navigating the dynamic world of digital assets with informed strategies for potential growth and diversification.</p>
+            </li>
+        </ul>
+    </section>
 
-  <section class="section">
-    <h2>Contact Us</h2>
-    <p>Email: ironbaycap@gmail.com</p>
-  </section>
+    <section id="global" class="container">
+        <h2>Global Reach</h2>
+        <ul>
+            <li>UAE</li>
+            <li>India</li>
+        </ul>
+    </section>
 
-  <footer class="footer">
-    &copy; 2025 Ironbay Capital. All rights reserved.
-  </footer>
+    <section id="contact" class="container">
+        <h2>Get In Touch</h2>
+        <form action="#" method="post">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
 
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="contact_email">Contact Email</label>
+            <input type="text" id="contact_email" value="contact@ironbayinvest.com" disabled>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Inquiry</button>
+        </form>
+        <div class="contact-info">
+            Or email us directly at: <a href="mailto:contact@ironbayinvest.com">contact@ironbayinvest.com</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Iron Bay Investments. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
