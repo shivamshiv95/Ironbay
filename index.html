@@ -24,12 +24,12 @@
             padding: 60px 0;
         }
 
-        /* Header Styles (Clean White) */
+        /* Header Styles (Darker, Smaller) */
         header {
-            background: #fff;
-            color: #343a40;
-            padding: 20px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(to right, #1a237e, #283593); /* Dark Blue/Indigo Gradient */
+            color: #fff; /* Light text on dark background */
+            padding: 15px 0; /* Reduced vertical padding for smaller size */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for better definition */
             position: sticky;
             top: 0;
             z-index: 100;
@@ -42,9 +42,9 @@
         }
 
         header h1 a {
-            color: #007bff;
+            color: #00c698; /* Teal for the logo */
             text-decoration: none;
-            font-size: 24px;
+            font-size: 22px; /* Slightly smaller logo text */
             font-weight: bold;
         }
 
@@ -57,18 +57,36 @@
         }
 
         header nav ul li {
-            margin-left: 25px;
+            margin-left: 20px; /* Slightly reduced spacing */
         }
 
         header nav ul li a {
-            color: #555;
+            color: #eee; /* Lighter text for better contrast */
             text-decoration: none;
-            font-size: 16px;
+            font-size: 15px; /* Slightly smaller navigation text */
             transition: color 0.3s ease;
         }
 
         header nav ul li a:hover {
-            color: #00c698; /* Vibrant Teal Hover */
+            color: #00c698; /* Teal hover effect */
+        }
+
+        header nav ul li:last-child {
+            margin-left: 25px;
+        }
+
+        header nav ul li:last-child a {
+            background-color: #00c698; /* Teal button */
+            color: white;
+            padding: 8px 12px; /* Smaller button padding */
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 13px; /* Smaller button text */
+            font-weight: bold;
+        }
+
+        header nav ul li:last-child a:hover {
+            background-color: #00a37a; /* Darker Teal Hover */
         }
 
         /* Showcase Section (Inspired Gradient) */
@@ -148,7 +166,7 @@
             width: 100%;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            content: url('https://images.unsplash.com/photo-1501164333659-c8a325840a49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Placeholder */
+            content: url('https://images.unsplash.com/photo-1501164333659-c8a325840a49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG0dG8twaGFlfHx8fGVufDB8fHx8fA%3D%3D'); /* Placeholder */
         }
 
         /* Services Section */
