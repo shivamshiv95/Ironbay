@@ -9,8 +9,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: #fff; /* Default to white */
+            color: #343a40; /* Darker text */
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -27,7 +27,7 @@
         /* Header Styles */
         header {
             background: #fff;
-            color: #333;
+            color: #343a40;
             padding: 20px 0;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: sticky;
@@ -67,12 +67,12 @@
         }
 
         header nav ul li a:hover {
-            color: #007bff;
+            color: #0056b3; /* Slightly darker blue on hover */
         }
 
         /* Showcase Section */
         #showcase {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1519389950473-47e70563f0e7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+            background: linear-gradient(to bottom, #007bff, #0056b3); /* Blue gradient */
             color: #fff;
             text-align: center;
             padding: 150px 0;
@@ -100,16 +100,18 @@
         .button {
             display: inline-block;
             padding: 12px 30px;
-            background-color: #007bff;
-            color: #fff;
+            background-color: #fff; /* White button */
+            color: #007bff; /* Blue text */
             text-decoration: none;
             border-radius: 5px;
             font-size: 18px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border: 2px solid #fff; /* White border */
         }
 
         .button:hover {
-            background-color: #0056b3;
+            background-color: #007bff; /* Blue background on hover */
+            color: #fff; /* White text on hover */
         }
 
         /* About Section */
@@ -147,12 +149,12 @@
             width: 100%;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            content: url('https://images.unsplash.com/photo-1501164333659-c8a325840a49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Placeholder image */
+            content: url('https://images.unsplash.com/photo-1501164333659-c8a325840a49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Placeholder */
         }
 
         /* Services Section */
         #services {
-            background: #f9f9f9;
+            background: #f8f9fa; /* Light gray background */
         }
 
         #services h2 {
@@ -176,10 +178,15 @@
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.3s ease; /* Subtle hover effect */
+        }
+
+        #services ul li:hover {
+            transform: translateY(-5px);
         }
 
         #services ul li h3 {
-            color: #333;
+            color: #007bff;
             margin-bottom: 10px;
         }
 
@@ -190,7 +197,7 @@
 
         /* Global Presence Section */
         #global {
-            background: #e9ecef;
+            background: #e3f2fd; /* Light blue background */
         }
 
         #global h2 {
@@ -211,6 +218,7 @@
         #global ul li {
             font-size: 20px;
             color: #555;
+            font-weight: bold; /* Make locations stand out */
         }
 
         /* Contact Section */
@@ -229,7 +237,7 @@
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
-            background: #f9f9f9;
+            background: #f8f9fa;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             display: flex;
@@ -239,7 +247,7 @@
         #contact label {
             margin-bottom: 8px;
             font-weight: bold;
-            color: #333;
+            color: #343a40;
         }
 
         #contact input[type="text"],
@@ -297,7 +305,7 @@
             font-size: 14px;
         }
 
-        /* Image for About Section (replace with your actual image URL if needed) */
+        /* Placeholder Image */
         #about .about-image img {
             content: url('https://images.unsplash.com/photo-1501164333659-c8a325840a49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
         }
