@@ -24,15 +24,10 @@
             padding: 60px 0;
         }
 
-        /* Header Styles (Startuply Inspired) */
+        /* Header Styles (Clean White) */
         header {
-            background: linear-gradient(to right, #34495e, #2c3e50); /* Dark blue gradient */
-            /* Add the geometric pattern overlay */
-            background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05)),
-                              linear-gradient(135deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05));
-            background-size: 20px 20px; /* Adjust size to control pattern density */
-            background-position: 0 0, 10px 10px; /* Offset the second gradient for the pattern */
-            color: #ecf0f1; /* Light gray text for navigation */
+            background: #fff;
+            color: #343a40;
             padding: 20px 0;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: sticky;
@@ -47,7 +42,7 @@
         }
 
         header h1 a {
-            color: #007bff; /* Keep your logo color */
+            color: #007bff;
             text-decoration: none;
             font-size: 24px;
             font-weight: bold;
@@ -58,7 +53,7 @@
             margin: 0;
             list-style: none;
             display: flex;
-            align-items: center; /* Vertically align items */
+            align-items: center;
         }
 
         header nav ul li {
@@ -66,38 +61,19 @@
         }
 
         header nav ul li a {
-            color: #ecf0f1; /* Light gray navigation text */
+            color: #555;
             text-decoration: none;
             font-size: 16px;
             transition: color 0.3s ease;
         }
 
         header nav ul li a:hover {
-            color: #1abc9c; /* Teal hover effect */
+            color: #00c698; /* Vibrant Teal Hover */
         }
 
-        header nav ul li:last-child { /* Style the Contact button (replaces Sign Up) */
-            margin-left: 30px;
-        }
-
-        header nav ul li:last-child a {
-            background-color: #1abc9c; /* Teal button background */
-            color: white; /* White button text */
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-transform: uppercase;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        header nav ul li:last-child a:hover {
-            background-color: #16a085; /* Darker teal on hover */
-            color: white;
-        }
-
-        /* Showcase Section */
+        /* Showcase Section (Inspired Gradient) */
         #showcase {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1519389950473-47e70563f0e7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+            background: radial-gradient(circle, #30193d, #000080); /* Deep Purple to Deep Blue */
             color: #fff;
             text-align: center;
             padding: 150px 0;
@@ -125,18 +101,16 @@
         .button {
             display: inline-block;
             padding: 12px 30px;
-            background-color: #fff; /* White button */
-            color: #007bff; /* Blue text */
+            background-color: #00c698; /* Vibrant Teal Button */
+            color: #fff;
             text-decoration: none;
             border-radius: 5px;
             font-size: 18px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            border: 2px solid #fff; /* White border */
+            transition: background-color 0.3s ease;
         }
 
         .button:hover {
-            background-color: #007bff; /* Blue background on hover */
-            color: #fff; /* White text on hover */
+            background-color: #00a37a; /* Darker Teal Hover */
         }
 
         /* About Section */
@@ -179,7 +153,7 @@
 
         /* Services Section */
         #services {
-            background: #f8f9fa; /* Light gray background */
+            background: #f8f9fa; /* Light Gray */
         }
 
         #services h2 {
@@ -203,15 +177,16 @@
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: center;
-            transition: transform 0.3s ease; /* Subtle hover effect */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
         }
 
         #services ul li:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced hover effect */
         }
 
         #services ul li h3 {
-            color: #007bff;
+            color: #00c698; /* Vibrant Teal Headings */
             margin-bottom: 10px;
         }
 
@@ -222,7 +197,7 @@
 
         /* Global Presence Section */
         #global {
-            background: #e3f2fd; /* Light blue background */
+            background: #e0f7fa; /* Very Light Cyan */
         }
 
         #global h2 {
@@ -243,7 +218,7 @@
         #global ul li {
             font-size: 20px;
             color: #555;
-            font-weight: bold; /* Make locations stand out */
+            font-weight: bold;
         }
 
         /* Contact Section */
@@ -292,7 +267,7 @@
 
         #contact button[type="submit"] {
             padding: 12px 20px;
-            background-color: #007bff;
+            background-color: #00c698; /* Vibrant Teal Button */
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -302,7 +277,7 @@
         }
 
         #contact button[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color: #00a37a; /* Darker Teal Hover */
         }
 
         #contact .contact-info {
@@ -332,7 +307,7 @@
 
         /* Placeholder Image */
         #about .about-image img {
-            content: url('https://images.unsplash.com/photo-1501164333659-c8a325840a49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            content: url('https://images.unsplash.com/photo-1501164333659-c8a325840a49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG0dG8twaGFlfHx8fGVufDB8fHx8fA%3D%3D');
         }
     </style>
 </head>
